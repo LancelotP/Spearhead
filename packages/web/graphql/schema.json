@@ -1,0 +1,60 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "INTERFACE",
+        "name": "Resource",
+        "possibleTypes": [
+          {
+            "name": "User"
+          },
+          {
+            "name": "Company"
+          },
+          {
+            "name": "Sale"
+          },
+          {
+            "name": "Estate"
+          },
+          {
+            "name": "DataRoom"
+          },
+          {
+            "name": "DataRoomFolder"
+          },
+          {
+            "name": "DataRoomFile"
+          },
+          {
+            "name": "Lot"
+          },
+          {
+            "name": "SaleParticipation"
+          }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "Node",
+        "possibleTypes": [
+          {
+            "name": "RentalParticipation"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "ActonTarget",
+        "possibleTypes": [
+          {
+            "name": "SaleParticipation"
+          },
+          {
+            "name": "LoiDeposit"
+          }
+        ]
+      }
+    ]
+  }
+}

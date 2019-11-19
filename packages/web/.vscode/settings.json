@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "vue-i18n-ally.keystyle": "nested",
+  "vue-i18n-ally.sourceLanguage": "fr-FR",
+  "vue-i18n-ally.displayLanguage": "fr-FR",
+  "vue-i18n-ally.experimental.sfc": true,
+  "vue-i18n-ally.forceEnabled": true
+}

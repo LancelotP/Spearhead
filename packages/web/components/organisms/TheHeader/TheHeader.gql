@@ -1,0 +1,19 @@
+fragment TheHeaderFragment on User {
+  id
+  firstName
+  lastName
+}
+
+query TheHeaderQuery {
+  viewer {
+    id
+    ...TheHeaderFragment
+  }
+}
+
+mutation TheHeaderMutation($input: UserCreateInput!) {
+  userCreate(input: $input) {
+    id
+    ...TheHeaderFragment
+  }
+}

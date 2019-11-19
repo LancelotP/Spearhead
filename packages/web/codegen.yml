@@ -1,0 +1,33 @@
+watch: true
+overwrite: true
+schema: 'http://localhost:3000/graphql'
+documents:
+  - 'components/**/*.{gql,graphql}'
+  - 'layouts/**/*.{gql,graphql}'
+  - 'plugins/**/*.{gql,graphql}'
+  - 'pages/**/*.{gql,graphql}'
+config:
+  scalars:
+    ResourceId: string
+    DateTime: Date
+# hooks:
+#   afterOneFileWrite:
+#     - eslint --fix
+generates:
+  graphql/schema.json:
+    plugins:
+      - fragment-matcher
+  graphql/types.ts:
+    plugins:
+      - typescript
+  components/:
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.ts
+      baseTypesPath: ../graphql/types.ts
+    plugins:
+      - typescript-operations
+      - typescript-document-nodes
+    config:
+      dedupeOperationSuffix: true
+      exportFragmentSpreadSubTypes: true
